@@ -199,6 +199,12 @@ public class ApplicationConfigServiceImpl
         return config;
     }
 
+    /***
+     * page
+     * @param config
+     * @param request
+     * @return
+     */
     @Override
     public IPage<ApplicationConfig> page(ApplicationConfig config, RestRequest request) {
         return this.baseMapper.page(
