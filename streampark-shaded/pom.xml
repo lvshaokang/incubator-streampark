@@ -32,12 +32,14 @@
     <modules>
         <module>streampark-shaded-slf4j</module>
         <module>streampark-shaded-jackson</module>
+        <module>streampark-shaded-netty</module>
     </modules>
 
     <properties>
         <slf4j.version>1.7.32</slf4j.version>
         <logback.version>1.2.11</logback.version>
         <jackson.version>2.13.5</jackson.version>
+        <netty.version>4.1.65.Final</netty.version>
     </properties>
 
     <dependencyManagement>
@@ -83,6 +85,13 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+
+            <!-- netty -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-resolver</artifactId>
+                <version>${netty.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

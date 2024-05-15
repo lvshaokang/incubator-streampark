@@ -17,7 +17,7 @@
 
 package org.apache.streampark.common.util
 
-import io.netty.resolver.HostsFileParser
+import org.apache.streampark.shaded.io.netty.resolver.HostsFileParser
 
 import java.net.InetAddress
 import java.util.{Map => JavaMap}

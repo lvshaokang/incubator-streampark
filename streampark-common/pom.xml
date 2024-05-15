@@ -108,13 +108,6 @@
             <artifactId>httpclient</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-resolver</artifactId>
-            <version>4.1.65.Final</version>
-            <optional>true</optional>
-        </dependency>
-
         <!--logback -->
         <dependency>
             <groupId>org.apache.streampark</groupId>
@@ -125,6 +118,12 @@
         <dependency>
             <groupId>org.apache.streampark</groupId>
             <artifactId>streampark-shaded-jackson</artifactId>
+            <version>${streampark.shaded.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.streampark</groupId>
+            <artifactId>streampark-shaded-netty</artifactId>
             <version>${streampark.shaded.version}</version>
         </dependency>
 
@@ -158,15 +157,8 @@
                             <artifactSet>
                                 <includes>
                                     <include>com.beachape:*</include>
-                                    <include>io.netty:netty-resolver</include>
                                 </includes>
                             </artifactSet>
-                            <relocations>
-                                <relocation>
-                                    <pattern>io.netty.resolver</pattern>
-                                    <shadedPattern>${streampark.shaded.package}.io.netty.resolver</shadedPattern>
-                                </relocation>
-                            </relocations>
                             <filters>
                                 <filter>
                                     <artifact>*:*</artifact>
